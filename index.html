@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Pictures</title>
+</head>
+
+<body>
+    <img src="https://picsum.photos/100" id="pic1" style="position: absolute; top: 0; right: 0;">
+    <img src="https://picsum.photos/100" id="pic2" style="position: absolute; top: 0; left: 0;">
+
+    <script>
+        let newright = 0;
+        let newtop = 0;
+        
+        const speed = 2;
+
+        const move = () => {
+            newright += speed;
+            newtop += speed;
+
+            pic1.style.right = `${newright}px`;
+            pic1.style.top = `${newtop}px`
+            pic2.style.left = `${newright}px`;
+            pic2.style.top = `${newtop}px`
+
+
+        }
+
+        setInterval(move, 54); // Adjust the interval as needed
+    </script>
+</body>
+
+</html>
